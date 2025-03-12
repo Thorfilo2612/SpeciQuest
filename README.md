@@ -1,2 +1,2 @@
-# Plantas
+# SpeciQuest 
 Proyecto 2 EED
