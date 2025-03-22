@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package plants;
+package specquest;
 
 /**
  *
- * @author Santiago, Fernando y Anthony
+ * @author Thony
  */
 public class Arbol {
     private Nodo raiz;
@@ -30,19 +30,21 @@ public class Arbol {
 
     // Avanzar en el árbol según la respuesta (true = sí, false = no)
     public String avanzar(boolean respuesta) {
-        if (nodoActual != null) {
-            if (respuesta) {
-                nodoActual = nodoActual.getNodoSi();
-            } else {
-                nodoActual = nodoActual.getNodoNo();
-            }
-            // Si el nodo es hoja, devuelve el valor como resultado
-            if (nodoActual != null && nodoActual.esHoja()) {
-                return nodoActual.getValor(); // Resultado final (especie)
-            }
-            return nodoActual != null ? nodoActual.getValor() : "Fin del árbol";
-        }
+        if (nodoActual == null) {
         return "No hay más opciones.";
+    }
+
+    // Avanzar según la respuesta
+    nodoActual = respuesta ? nodoActual.getNodoSi() : nodoActual.getNodoNo();
+
+    if (nodoActual == null) {
+        return "Ruta no definida en el árbol.";
+    }
+
+    return nodoActual.esHoja() 
+        ? nodoActual.getValor() 
+        : nodoActual.getValor(); // Retorna la siguiente pregunta
+        
     }
 
     // Verificar si se ha alcanzado un resultado final
