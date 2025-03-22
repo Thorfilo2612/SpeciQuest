@@ -6,7 +6,7 @@ package plants;
 
 /**
  *
- * @author Thony
+ * @author Santiago, Fernando y Anthony
  */
 public class Arbol {
     private Nodo raiz;
