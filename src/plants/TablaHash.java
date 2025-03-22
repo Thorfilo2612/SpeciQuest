@@ -7,7 +7,7 @@ package plants;
 
 /**
  *
- * @author Santiago Atacho
+ * @author Santiago, Fernando y Anthony
  */
 public class TablaHash {
     private static final int TAMANO = 100;
