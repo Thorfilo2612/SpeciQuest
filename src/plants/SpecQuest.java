@@ -1,9 +1,8 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-
-package plants;
+package specquest;
 import javax.swing.SwingUtilities;
 import javax.swing.*;
 import java.awt.*;
@@ -11,35 +10,36 @@ import java.awt.event.*;
 
 /**
  *
- * @author Santiago, Fernando y Anthony
+ * @author Thony
  */
-public class SpecQuest extends JFrame{
-
+public class SpecQuest extends JFrame {
     public static void main(String[] args) {
-        // Crear árbol de prueba
-        Nodo raiz = new Nodo("¿Tiene hojas verdes?");
-        Nodo nodoSi = new Nodo("¿Es un árbol frutal?");
-        Nodo nodoNo = new Nodo("¿Tiene flores?");
-        Nodo nodoFrutalSi = new Nodo("Manzano");
-        Nodo nodoFrutalNo = new Nodo("Pino");
-        Nodo nodoFlorSi = new Nodo("Rosa");
-        Nodo nodoFlorNo = new Nodo("Cactus");
-
-        raiz.setNodoSi(nodoSi);
-        raiz.setNodoNo(nodoNo);
-        nodoSi.setNodoSi(nodoFrutalSi);
-        nodoSi.setNodoNo(nodoFrutalNo);
-        nodoNo.setNodoSi(nodoFlorSi);
-        nodoNo.setNodoNo(nodoFlorNo);
-
-        Arbol arbol = new Arbol();
-        arbol.setRaiz(raiz);
-
-        TablaHash tabla = new TablaHash();
-        tabla.insertar("Manzano", "Es un árbol frutal");
-        tabla.insertar("Rosa", "Es una flor");
-
-        SwingUtilities.invokeLater(() -> new ClaveDicotomica(arbol));
+        SwingUtilities.invokeLater(() -> {
+            JFrame frame = new JFrame("Cargar JSON");
+            JButton btnCargar = new JButton("Cargar archivo JSON");
+            btnCargar.addActionListener(e -> cargarJSON(frame));
+            frame.add(btnCargar);
+            frame.pack();
+            frame.setVisible(true);
+        });
     }
-    
+
+    private static void cargarJSON(JFrame parent) {
+        JFileChooser fileChooser = new JFileChooser();
+        if (fileChooser.showOpenDialog(parent) == JFileChooser.APPROVE_OPTION) {
+            try {
+                // Cargar árbol y tabla hash desde el JSON
+                Arbol arbol = JSONLoader.cargarArbolDesdeJson(fileChooser.getSelectedFile().getPath());
+                TablaHash tabla = JSONLoader.cargarTablaHashDesdeJSON(fileChooser.getSelectedFile().getPath());
+
+                // Iniciar interfaz con los datos cargados
+                SwingUtilities.invokeLater(() -> {
+                    ClaveDicotomica gui = new ClaveDicotomica(arbol);
+                    gui.tablaHash = tabla; // Asegúrate de agregar un setter en ClaveDicotomica
+                });
+            } catch (Exception ex) {
+                JOptionPane.showMessageDialog(parent, "Error al cargar el JSON: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+    }
 }
