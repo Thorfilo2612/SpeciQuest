@@ -13,7 +13,7 @@ import java.util.Iterator;
 
 /**
  *
- * @author Santiago Atacho
+ * @author Santiago, Fernando y Anthony
  */
 public class JSONLoader {
     public static Arbol cargarArbolDesdeJson(String rutaArchivo) throws IOException, 
