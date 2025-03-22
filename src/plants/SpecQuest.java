@@ -11,7 +11,7 @@ import java.awt.event.*;
 
 /**
  *
- * @author Thony
+ * @author Santiago, Fernando y Anthony
  */
 public class SpecQuest extends JFrame{
 
