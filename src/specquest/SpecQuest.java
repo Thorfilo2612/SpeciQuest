@@ -6,13 +6,19 @@ package specquest;
 import javax.swing.SwingUtilities;
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 /**
- *
- * @author Thony
+ * @autor Fernando, Thony, Santiago
+ * Clase principal que inicia la aplicación. Muestra un botón
+ * para cargar un archivo JSON y crear el árbol y la tabla hash,
+ * luego despliega la interfaz ClaveDicotomica.
  */
 public class SpecQuest extends JFrame {
+
+    /**
+     * Método principal de la aplicación.
+     * @param args argumentos de línea de comandos (no utilizados).
+     */
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Cargar JSON");
@@ -24,6 +30,13 @@ public class SpecQuest extends JFrame {
         });
     }
 
+    /**
+     * Abre un diálogo para seleccionar el archivo JSON.
+     * Al cargarlo con éxito, crea un {@link ClaveDicotomica} con el árbol
+     * y asigna la tabla hash al GUI.
+     * 
+     * @param parent Ventana padre para el diálogo de selección.
+     */
     private static void cargarJSON(JFrame parent) {
         JFileChooser fileChooser = new JFileChooser();
         if (fileChooser.showOpenDialog(parent) == JFileChooser.APPROVE_OPTION) {
@@ -32,13 +45,19 @@ public class SpecQuest extends JFrame {
                 Arbol arbol = JSONLoader.cargarArbolDesdeJson(fileChooser.getSelectedFile().getPath());
                 TablaHash tabla = JSONLoader.cargarTablaHashDesdeJSON(fileChooser.getSelectedFile().getPath());
 
-                // Iniciar interfaz con los datos cargados
+                // Iniciar interfaz gráfica
                 SwingUtilities.invokeLater(() -> {
                     ClaveDicotomica gui = new ClaveDicotomica(arbol);
-                    gui.tablaHash = tabla; // Asegúrate de agregar un setter en ClaveDicotomica
+                    gui.tablaHash = tabla; // Se asigna la tabla
                 });
+                parent.dispose();
             } catch (Exception ex) {
-                JOptionPane.showMessageDialog(parent, "Error al cargar el JSON: " + ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(
+                    parent, 
+                    "Error al cargar el JSON: " + ex.getMessage(), 
+                    "Error", 
+                    JOptionPane.ERROR_MESSAGE
+                );
             }
         }
     }
