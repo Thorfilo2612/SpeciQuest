@@ -9,17 +9,30 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-/*
-*
-* @autor Fernando, Anthony, Santiago
-*/
+
+/**
+ *  
+ * @author Fernando, Anthony, Santiago 
+ *
+ * Clase que maneja la carga de un árbol y una tabla hash 
+ * a partir de un archivo JSON.
+ */
 public class JSONLoader {
 
+    /**
+     * Carga un árbol dicotómico desde un archivo JSON, sin
+     * requerir que todas las especies tengan la misma cantidad de preguntas.
+     *
+     * @param rutaArchivo Ruta al archivo JSON con la estructura de preguntas/especies.
+     * @return El árbol dicotómico construido.
+     * @throws IOException Si ocurre un problema al leer el archivo.
+     * @throws org.json.JSONException Si la estructura JSON no es válida.
+     */
     public static Arbol cargarArbolDesdeJson(String rutaArchivo) throws IOException, org.json.JSONException {
         String contenido = new String(Files.readAllBytes(Paths.get(rutaArchivo)));
         JSONObject json = new JSONObject(contenido);
 
-        // Verificar que exista al menos una clave en el JSON (p.ej. "Especies")
+        // Verificar que exista al menos una clave en el JSON (por ejemplo "Especies")
         JSONArray claves = json.names();
         if (claves == null || claves.length() == 0) {
             throw new org.json.JSONException("Formato inválido: No hay clave dicotómica en el JSON.");
@@ -50,7 +63,7 @@ public class JSONLoader {
         Nodo raiz = new Nodo(primeraPregunta);
         arbol.setRaiz(raiz);
 
-        // Insertar todas las especies (ahora sin exigir que tengan todas el mismo número de preguntas)
+        // Insertar todas las especies (sin exigir igual número de preguntas)
         for (int i = 0; i < especiesArray.length(); i++) {
             JSONObject especieObj = especiesArray.getJSONObject(i);
             String nombreEspecie = especieObj.keys().next();
@@ -70,8 +83,12 @@ public class JSONLoader {
 
     /**
      * Inserta una secuencia de preguntas (pregunta -> respuesta [true/false])
-     * en el árbol, empezando en nodoActual (generalmente la raíz).
+     * en el árbol, empezando en {@code nodoActual} (generalmente la raíz).
      * No requiere que todas las especies tengan la misma cantidad de preguntas.
+     *
+     * @param nodoActual El nodo de inicio (típicamente la raíz).
+     * @param preguntasArray Arreglo JSON que contiene preguntas y respuestas booleanas.
+     * @param nombreEspecie Nombre de la especie (último elemento si se llega a la hoja).
      */
     private static void insertarEspecie(Nodo nodoActual, JSONArray preguntasArray, String nombreEspecie) {
         for (int j = 0; j < preguntasArray.length(); j++) {
@@ -86,28 +103,27 @@ public class JSONLoader {
             String pregunta = preguntaObj.keys().next();
             boolean respuesta = preguntaObj.getBoolean(pregunta);
 
-            // Si el nodo actual es null (muy raro), lo creamos
+            // Si el nodo actual es null (muy raro), se crea
             if (nodoActual == null) {
                 nodoActual = new Nodo(pregunta);
             }
 
             // Si el nodo actual ya es hoja pero aún quedan preguntas,
-            // lo convertimos en un nodo de pregunta para poder continuar.
+            // lo convertimos en nodo de pregunta
             if (nodoActual.esHoja() && j < preguntasArray.length() - 1) {
                 nodoActual.setValor(pregunta);
                 nodoActual.setNodoSi(null);
                 nodoActual.setNodoNo(null);
             }
 
-            // Forzar la pregunta si difiere del valor del nodo actual
+            // Forzamos la pregunta si difiere del valor actual
             if (!nodoActual.getValor().equals(pregunta)) {
                 nodoActual.setValor(pregunta);
                 nodoActual.setNodoSi(null);
                 nodoActual.setNodoNo(null);
             }
 
-            // Si estamos en la última pregunta (j == preguntasArray.length()-1),
-            // se crea la hoja final con el nombre de la especie.
+            // Si es la última pregunta, se crea la hoja con el nombre de la especie
             if (j == preguntasArray.length() - 1) {
                 Nodo nodoEspecie = new Nodo(nombreEspecie);
                 if (respuesta) {
@@ -116,9 +132,8 @@ public class JSONLoader {
                     nodoActual.setNodoNo(nodoEspecie);
                 }
                 break;
-            }
-            // De lo contrario, seguimos a la siguiente pregunta en la rama que corresponda
-            else {
+            } else {
+                // Aún no es la última pregunta
                 JSONObject siguienteObj = preguntasArray.getJSONObject(j + 1);
                 if (!siguienteObj.keys().hasNext()) {
                     throw new RuntimeException("Objeto JSON vacío en índice " + (j+1) 
@@ -144,7 +159,12 @@ public class JSONLoader {
     }
 
     /**
-     * Carga la tabla hash desde el mismo archivo JSON (lógica existente).
+     * Carga una tabla hash desde el mismo archivo JSON.
+     *
+     * @param rutaArchivo Ruta al archivo JSON a procesar.
+     * @return Instancia de {@code TablaHash} con todos los valores insertados.
+     * @throws IOException Si hay problemas al leer el archivo.
+     * @throws org.json.JSONException Si el contenido JSON no es válido.
      */
     public static TablaHash cargarTablaHashDesdeJSON(String rutaArchivo) throws IOException, org.json.JSONException {
         String contenido = new String(Files.readAllBytes(Paths.get(rutaArchivo)));
