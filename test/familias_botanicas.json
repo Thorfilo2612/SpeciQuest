@@ -1,0 +1,509 @@
+{
+    "Familias botanicas":[
+        {"Cola de Caballo":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":true}
+            ]
+        },
+        {"Helecho trebol":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":true},
+            {"Raices llegan al fondo":true}
+            ]
+        },
+        {"Helecho flotante":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":true},
+            {"Raices llegan al fondo":false},
+            {"Hojas peludas":true}
+            ]
+        },
+        {"Yerba del agua":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":true},
+            {"Raices llegan al fondo":false},
+            {"Hojas peludas":false}
+            ]
+        },
+        {"Algodoncillo de los pantanos":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":true}
+            ]
+        },
+        {"Helecho reviviscente":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":true}
+            ]
+        },
+        {"Musgo de espiga":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":true},
+            {"Pinnas cuadrangulares":true}
+            ]
+        },
+        {"Pino de tierra":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":true},
+            {"Pinnas cuadrangulares":false},
+            {"Esporofilos alternantes":false}
+            ]
+        },
+        {"Musgo abeto o derecho":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":true},
+            {"Pinnas cuadrangulares":false},
+            {"Esporofilos alternantes":true}
+            ]
+        },
+        {"Helechos trepadores":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":false},
+            {"Enredadera":true}
+            ]
+        },
+        {"Lengua de serpiente":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":false},
+            {"Enredadera":false},
+            {"Esporangio con anulo":false}
+            ]
+        },
+        {"Helecho real":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":false},
+            {"Enredadera":false},
+            {"Esporangio con anulo":true},
+            {"Hojas marrones al madurar las esporas":true}
+            ]
+        },
+        {"Helecho alado":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":false},
+            {"Enredadera":false},
+            {"Esporangio con anulo":true},
+            {"Hojas marrones al madurar las esporas":false},
+            {"Soro en el borde de la hoja":true},
+            {"Peciolo con dos divisiones principales":true}
+            ]
+        },
+        {"Helecho aguila":[
+            {"Reproduccion por esporas":true},
+            {"Tallos unidos":false},
+            {"Flota sobre el agua":false},
+            {"Hojas con forma de puas":false},
+            {"Crece sobre las rocas":false},
+            {"Hojas miden 1 centimetro":false},
+            {"Enredadera":false},
+            {"Esporangio con anulo":true},
+            {"Hojas marrones al madurar las esporas":false},
+            {"Soro en el borde de la hoja":true},
+            {"Peciolo con dos divisiones principales":false}
+            ]
+        },
+        {"Tejo":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":false},
+            {"Semillas en estructura de pinna":false}
+            ]
+        },
+        {"Cipres":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":false},
+            {"Semillas en estructura de pinna":true},
+            {"Hojas alternantes":false}
+            ]
+        },
+        {"Pino":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":false},
+            {"Semillas en estructura de pinna":true},
+            {"Hojas alternantes":true}
+            ]
+        },
+        {"Calas":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":true},
+            {"Tallo y hojas bien diferenciadas":false}
+            ]
+        },
+        {"Cebollin o ajo falso":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":true},
+            {"Tallo y hojas bien diferenciadas":true},
+            {"Flores reemplazadas por bulbos":true},
+            {"Huele a cebolla o ajo":true}
+            ]
+        },
+        {"Junco":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":true},
+            {"Tallo y hojas bien diferenciadas":true},
+            {"Flores reemplazadas por bulbos":true},
+            {"Huele a cebolla o ajo":false},
+            {"Hojas cilindricas o elipticas":true}
+            ]
+        },
+        {"Hierba de lago":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":true},
+            {"Tallo y hojas bien diferenciadas":true},
+            {"Flores reemplazadas por bulbos":true},
+            {"Huele a cebolla o ajo":false},
+            {"Hojas cilindricas o elipticas":false},
+            {"Planta sumergida acuatica":true}
+            ]
+        },
+        {"Grama":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":true},
+            {"Tallo y hojas bien diferenciadas":true},
+            {"Flores reemplazadas por bulbos":true},
+            {"Huele a cebolla o ajo":false},
+            {"Hojas cilindricas o elipticas":false},
+            {"Planta sumergida acuatica":false},
+            {"Flores de forma punzante":true}
+            ]
+        },
+        {"Carrizo":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":true},
+            {"Tallo y hojas bien diferenciadas":true},
+            {"Flores reemplazadas por bulbos":true},
+            {"Huele a cebolla o ajo":false},
+            {"Hojas cilindricas o elipticas":false},
+            {"Planta sumergida acuatica":false},
+            {"Flores de forma punzante":false}
+            ]
+        },
+        {"Muerdago":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":true}
+            ]
+        },
+        {"Nuez americana":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":true},
+            {"Frutos con 3 lobulos":true}
+            ]
+        },
+        {"Bejuco o lima":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":true},
+            {"Frutos con 3 lobulos":false},
+            {"Fruto en forma de capsula":true}
+            ]
+        },
+        {"Vide trompeta":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":true},
+            {"Frutos con 3 lobulos":false},
+            {"Fruto en forma de capsula":false}
+            ]
+        },
+        {"Amaranto o quinoa":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":false},
+            {"Tallo con hojas diminutas":true}
+            ]
+        },
+        {"Flor de Laponia":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":false},
+            {"Tallo con hojas diminutas":false},
+            {"Hojas opuestas":false}
+            ]
+        },
+        {"Rosal":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":false},
+            {"Tallo con hojas diminutas":false},
+            {"Hojas opuestas":true},
+            {"Hojas con escamas blancas o marrones":true}
+            ]
+        },
+        {"Flor Galax":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":false},
+            {"Tallo con hojas diminutas":false},
+            {"Hojas opuestas":true},
+            {"Hojas con escamas blancas o marrones":true}
+            ]
+        },
+        {"Catalpa china":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":false},
+            {"Tallo con hojas diminutas":false},
+            {"Hojas opuestas":false},
+            {"Semillas con alas":true}
+            ]
+        },
+        {"Frailecillo":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":false},
+            {"Tallo con hojas diminutas":false},
+            {"Hojas opuestas":false},
+            {"Semillas con alas":false},
+            {"Petalos rosados":true}
+            ]
+        },
+        {"Aroma de laguna":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Hojas alternantes":false},
+            {"Parasitarea":false},
+            {"Hojas compuestas":false},
+            {"Tallo con hojas diminutas":false},
+            {"Hojas opuestas":false},
+            {"Semillas con alas":false},
+            {"Petalos rosados":false}
+            ]
+        },
+        {"Margarita o girasol":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":true}
+            ]
+        },
+        {"Haba o habichuela":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":true},
+            {"Hojas bajo flor son simetricas":false},
+            {"Fruto en vaina":true}
+            ]
+        },
+        {"Acre o castanno chino":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":true},
+            {"Hojas bajo flor son simetricas":false},
+            {"Fruto en vaina":false}
+            ]
+        },
+        {"Liana camaleon":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":true},
+            {"Hojas bajo flor son simetricas":true},
+            {"Hojas en forma de pluma":false}
+            ]
+        },
+        {"Uva o parra":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":true},
+            {"Hojas bajo flor son simetricas":true},
+            {"Hojas en forma de pluma":true},
+            {"Trepadora":true}
+            ]
+        },
+        {"Anis":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":true},
+            {"Hojas bajo flor son simetricas":true},
+            {"Hojas en forma de pluma":true},
+            {"Trepadora":false}
+            ]
+        },
+        {"Acedera o ruibarbo":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":false},
+            {"Liana":true},
+            {"Alas en la vena de la hoja":true}
+            ]
+        },
+        {"Jaulas de noche":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":false},
+            {"Liana":true},
+            {"Alas en la vena de la hoja":false}
+            ]
+        },
+        {"Pipa californiana":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":false},
+            {"Liana":true},
+            {"Alas en la vena de la hoja":false},
+            {"Base de la flor fuertemente curvada":true}
+            ]
+        },
+        {"Flor del Amante Eterno":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":false},
+            {"Liana":true},
+            {"Alas en la vena de la hoja":false},
+            {"Base de la flor fuertemente curvada":false},
+            {"La planta se puede parar sola":true}
+            ]
+        },
+        {"Gengibre cimarron":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":false},
+            {"Liana":true},
+            {"Alas en la vena de la hoja":false},
+            {"Base de la flor fuertemente curvada":false},
+            {"La planta se puede parar sola":false}
+            ]
+        },
+        {"Mora":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":false},
+            {"Liana":false},
+            {"Sabia lechosa":true}
+            ]
+        },
+        {"Canabis":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":true},
+            {"Flor en forma de estrella":false},
+            {"Hojas compuestas":false},
+            {"Liana":false},
+            {"Sabia lechosa":false}
+            ]
+        },
+        {"Manzanilla":[
+            {"Reproduccion por esporas":false},
+            {"Produce semillas a traves de flores":true},
+            {"Hojas con venas paralelas":false},
+            {"Tallo maderoso":false}
+            ]
+        }
+    ]
+}

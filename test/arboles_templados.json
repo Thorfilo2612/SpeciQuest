@@ -1,0 +1,54 @@
+{
+    "Arboles templados":[
+        {"Pino":[
+            {"Hojas como agujas":true},
+            {"Hojas de agujas vienen en ramales":true}
+            ]
+        },
+        {"Abeto":[
+            {"Hojas como agujas":true},
+            {"Hojas de agujas vienen en ramales":false}
+            ]
+        },
+        {"Roble Blanco":[
+            {"Hojas como agujas":false},
+            {"Hojas compuestas":false},
+            {"Bordes de hoja aserrados":false},
+            {"Bordes de hoja con lobulos":true}
+            ]
+        },
+        {"Magnolia":[
+            {"Hojas como agujas":false},
+            {"Hojas compuestas":false},
+            {"Bordes de hoja aserrados":false},
+            {"Bordes de hoja con lobulos":false}
+            ]
+        },
+        {"Acebo":[
+            {"Hojas como agujas":false},
+            {"Hojas compuestas":false},
+            {"Bordes de hoja aserrados":true},
+            {"Bordes de hoja con espinas":true}
+            ]
+        },
+        {"Olmo":[
+            {"Hojas como agujas":false},
+            {"Hojas compuestas":false},
+            {"Bordes de hoja aserrados":true},
+            {"Bordes de hoja con espinas":false}
+            ]
+        },
+        {"Castanna":[
+            {"Hojas como agujas":false},
+            {"Hojas compuestas":true},
+            {"Sub-hojas parten de un punto central":true}
+            ]
+        },
+        {"Nogal":[
+            {"Hojas como agujas":false},
+            {"Hojas compuestas":true},
+            {"Sub-hojas parten de un punto central":false}
+            ]
+        }
+    ]
+}
